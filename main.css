@@ -269,7 +269,8 @@ h3,
 h4,
 h5,
 p {
-    margin-bottom: 22px;
+    margin: 20px 30px;
+    max-width: 750px;
 }
 /*
   ========================================
