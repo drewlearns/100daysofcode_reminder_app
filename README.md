@@ -13,7 +13,7 @@ Yes. If you have opensource experience and want to join, great! We would love to
 
 Join me, Drew Karriker and friends, at [https://discord.gg/AntJA73Qx2](https://discord.gg/AntJA73Qx2). Let's code!
 
-## How to run the project locally
+<!-- ## How to run the project locally
 
 ### Prerequisites:
 
@@ -28,4 +28,4 @@ To set up and run a local instance of 100daysofcode_reminder_app, the following 
 * `cd 100daysofcode_reminder_app`
 * Install the necessary dependencies locally via node package manager(npm) by running `npm i`
 * `npm run dev`
-* Visit `localhost:3000` on your browser
+* Visit `localhost:3000` on your browser -->
