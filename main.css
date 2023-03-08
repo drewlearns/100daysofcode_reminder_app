@@ -182,11 +182,25 @@ em {
 footer{
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 40%;
     width: 300px;
     border: 3px solid #73AD21;
     margin-top: 20px;
     margin-left: 20px;
+}
+
+textarea{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.quote{
+    max-width: 500px;
+    color: bisque;
+    margin-left: 20px;
+}
+.quote>p, .quote_button{
+    text-align: center;
 }
 /*
   ========================================
@@ -258,16 +272,13 @@ p a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.container,
-.grid {
+.main {
     margin: 0 auto;
-    width: 960px;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
-.container {
-    padding-left: 30px;
-    padding-right: 30px;
-}
+
 /*
   ========================================
   Typography
@@ -287,6 +298,10 @@ p {
   Buttons
   ========================================
 */
+button{
+    border-radius: 5px;
+    margin-left: 30px;
+}
 
 .btn {
     border-radius: 5px;
