@@ -194,14 +194,12 @@ textarea{
     margin-bottom: 10px;
 }
 
-.quote{
+#quote{
     max-width: 500px;
     color: bisque;
     margin-left: 20px;
 }
-.quote>p, .quote_button{
-    text-align: center;
-}
+
 /*
   ========================================
   Links
