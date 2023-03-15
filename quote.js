@@ -1,27 +1,21 @@
-function getFetch() {
-  const url = "https://type.fit/api/quotes";
-
-  fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      const randomItem = data[Math.floor(Math.random() * data.length)];
-      if (randomItem.author == null) {
-        randomItem.author = "Unknown";
-      }
-
-      document.querySelector("quote").appendChild;
-        function displayQuote(quote) {
-        quote.h1.appendChild(randomItem.data);
-        quote.h2.appendChild(randomItem.author);
-      }
-      displayQuote();
-
-      trycatch((err) => {
-        console.log(`error ${err}`);
-      });
-    });
+const h1 = document.querySelector(".quote");
+const h2 = document.querySelector(".author");
+let request = new XMLHttpRequest()
+request.open("GET","https://type.fit/api/quotes");
+request.send()
+request.onload = () =>{
+    if (request.status == 200) {
+        data = JSON.parse(request.response)
+        // console.log(data)
+        const randomItem = data[Math.floor(Math.random() * data.length)]
+        if (randomItem.author == null){
+            randomItem.author = "Unknown"
+        }
+        // console.log(randomItem.author)
+        // console.log(randomItem)
+        h1.textContent = randomItem.text
+        h2.textContent = `- ${randomItem.author}`
+    } else{
+        console.log("quote not found")
+    }
 }
-
-
