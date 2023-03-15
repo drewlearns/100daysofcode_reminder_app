@@ -10,15 +10,20 @@ function getFetch() {
       if (randomItem.author == null) {
         randomItem.author = "Unknown";
       }
+
+          // const quote = document.querySelector(".quote");
+          // function displayQuote() {
+          //   document.createElement("h1").appendChild(h1.randomItem.data);
+          //   document.createElement("h2").appendChild(h2.randomItem.author);
+          // }
+          // displayQuote(getFetch);
+
       trycatch((err) => {
         console.log(`error ${err}`);
       });
     });
-const quote = document.getElementById("#quote");
-    function displayQuote(){
-        quote.appendChild(randomItem.text);
-        quote.appendChild(randomItem.author);
-    }
-    displayQuote(getFetch);
+
+
+
 }
 

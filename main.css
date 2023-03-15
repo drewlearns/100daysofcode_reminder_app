@@ -194,7 +194,7 @@ textarea{
     margin-bottom: 10px;
 }
 
-#quote{
+.quote{
     max-width: 500px;
     color: bisque;
     margin-left: 20px;
