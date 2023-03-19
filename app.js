@@ -150,32 +150,32 @@ app.use(cors());
 // set the view engine to ejs
 app.set("view engine", "ejs");
 app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`)
+  console.log(`100DaysofCode_Reminder_App listening on port ${process.env.PORT}!`)
 );
 
 // use res.render to load up an ejs view file
 
 // index page
 app.get("/", function (_req, res) {
-    res.render("pages/index");
+    res.render("/");
   });
 
 // about page
 app.get("/about", function (_req, res) {
-    res.render("pages/about");
+    res.render("/about");
   });
 
 // Signin page
 app.get("/signin", function (_req, res) {
-    res.render("pages/signin");
+    res.render("/signin");
   });
 
 // Signup page
 app.get("/signup", function (_req, res) {
-    res.render("pages/signup");
+    res.render("/signup");
   });
 
 // Logout page
 app.get("/logout", function (_req, res) {
-    res.render("pages/index");
+    res.render("/");
   });
