@@ -140,18 +140,11 @@
 // });
 
 // Express/Cors/Port
-const env = require ("dotenv/config");
 const cors = require("cors");
 const express = require("express");
 
 const app = express();
 app.use(cors());
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -177,3 +170,5 @@ app.get("/signin", (req, res) => {
 app.get("/signup", (req, res) => {
   res.render("pages/signup");
 });
+
+app.listen(3000, () => console.log("Example app listening on port 3000!"));
