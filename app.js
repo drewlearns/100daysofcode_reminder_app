@@ -139,10 +139,19 @@
 //   });
 // });
 
-// Create EJS templates
+// Express/Cors/Port
+const env = require ("dotenv/config");
+const cors = require("cors");
+const express = require("express");
 
-var express = require("express");
-var app = express();
+const app = express();
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(3000, () => console.log("Example app listening on port 3000!"));
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -150,24 +159,21 @@ app.set("view engine", "ejs");
 // use res.render to load up an ejs view file
 
 // index page
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("pages/index");
 });
 
 // about page
-app.get("/about", function (req, res) {
+app.get("/about", (req, res) => {
   res.render("pages/about");
 });
 
 // Signin page
-app.get("/signin", function (req, res) {
+app.get("/signin", (req, res) => {
   res.render("pages/signin");
 });
 
 // Signup page
-app.get("/signup", function (req, res) {
+app.get("/signup", (req, res) => {
   res.render("pages/signup");
 });
-
-app.listen(8080);
-console.log("Server is listening on port 8080");
