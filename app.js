@@ -16,7 +16,7 @@
 
 // const todoItems = [];
 
-//! THEME TOGGLE
+// //! THEME TOGGLE
 
 // let selectedTheme = localStorage.getItem("themeSelection");
 
@@ -140,6 +140,7 @@
 // });
 
 // Express/Cors/Port
+const dotenv = require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 
@@ -169,6 +170,11 @@ app.get("/signin", (req, res) => {
 // Signup page
 app.get("/signup", (req, res) => {
   res.render("pages/signup");
+});
+
+// Logout page
+app.get("/logout", (req, res) => {
+  res.render("pages/index")
 });
 
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
