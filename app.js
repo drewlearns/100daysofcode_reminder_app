@@ -149,32 +149,33 @@ app.use(cors());
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
+app.listen(process.env.PORT, () =>
+  console.log(`Example app listening on port ${process.env.PORT}!`)
+);
 
 // use res.render to load up an ejs view file
 
 // index page
-app.get("/", (req, res) => {
-  res.render("pages/index");
-});
+app.get("/", function (_req, res) {
+    res.render("pages/index");
+  });
 
 // about page
-app.get("/about", (req, res) => {
-  res.render("pages/about");
-});
+app.get("/about", function (_req, res) {
+    res.render("pages/about");
+  });
 
 // Signin page
-app.get("/signin", (req, res) => {
-  res.render("pages/signin");
-});
+app.get("/signin", function (_req, res) {
+    res.render("pages/signin");
+  });
 
 // Signup page
-app.get("/signup", (req, res) => {
-  res.render("pages/signup");
-});
+app.get("/signup", function (_req, res) {
+    res.render("pages/signup");
+  });
 
 // Logout page
-app.get("/logout", (req, res) => {
-  res.render("pages/index")
-});
-
-app.listen(3000, () => console.log("Example app listening on port 3000!"));
+app.get("/logout", function (_req, res) {
+    res.render("pages/index");
+  });
