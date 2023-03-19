@@ -156,26 +156,23 @@ app.listen(process.env.PORT, () =>
 // use res.render to load up an ejs view file
 
 // index page
-app.get("/", function (_req, res) {
-    res.render("/");
+app.get("/", function (req, res) {
+    res.render("index.ejs");
   });
 
 // about page
-app.get("/about", function (_req, res) {
-    res.render("/about");
+app.get("/about", function (req, res) {
+    res.render("about.ejs");
   });
 
 // Signin page
-app.get("/signin", function (_req, res) {
-    res.render("/signin");
+app.get("/signin", function (req, res) {
+    res.render("signin.ejs");
   });
 
 // Signup page
-app.get("/signup", function (_req, res) {
-    res.render("/signup");
+app.get("/signup", function (req, res) {
+    res.render("signup.ejs");
   });
 
-// Logout page
-app.get("/logout", function (_req, res) {
-    res.render("/");
-  });
+
