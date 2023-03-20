@@ -149,6 +149,11 @@ app.use(cors());
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
+
+const partials = require("express-partials");
+app.use(partials(__dirname + "/views/partials"));
+
 app.listen(process.env.PORT, () =>
   console.log(`100DaysofCode_Reminder_App listening on port ${process.env.PORT}!`)
 );
@@ -157,22 +162,22 @@ app.listen(process.env.PORT, () =>
 
 // index page
 app.get("/", function (req, res) {
-    res.render("index.ejs");
+    res.render("index");
   });
 
 // about page
 app.get("/about", function (req, res) {
-    res.render("about.ejs");
+    res.render("about");
   });
 
 // Signin page
 app.get("/signin", function (req, res) {
-    res.render("signin.ejs");
+    res.render("signin");
   });
 
 // Signup page
 app.get("/signup", function (req, res) {
-    res.render("signup.ejs");
+    res.render("signup");
   });
 
 
